@@ -1,0 +1,13 @@
+{
+  "name": "altschool-backend",
+  "version": "1.0.0",
+  "description": "this for backend class and practice",
+  "main": "exportUseCase.js",
+  
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kosi",
+  "license": "ISC"
+}

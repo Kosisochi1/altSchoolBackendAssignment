@@ -14,12 +14,10 @@ function handleIventoryRequest(req, res) {
 	}
 	if (req.url.endsWith('/inventory') && req.method === 'GET') {
 		getFunction(req, res);
+		//Function for getting one item from the data base
+	} else if (req.url.startsWith('/v1/inventory') && req.method === 'GET') {
+		getOneIventory(req, res);
 	}
-	//Function for getting one item from the data base
-
-	// if (req.url.startsWith('/v1/inventory') && req.method === 'GET') {
-	// 	getOneIventory(req, res);
-	// }
 	if (req.url.startsWith('/v1/inventory') && req.method === 'PUT') {
 		putFunction(req, res);
 	}

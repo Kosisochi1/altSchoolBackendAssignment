@@ -16,5 +16,11 @@
         "price": 600,
         "size": "large",
         "id": "108"
+    },
+    {
+        "name": "Challawa",
+        "price": 350,
+        "size": "large",
+        "id": "28"
     }
 ]

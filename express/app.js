@@ -5,19 +5,24 @@ const bodyParser = require('body-parser');
 
 const PORT = 5000;
 const app = express();
+const app_router = express.Router();
 
 app.use(bodyParser.json());
 app.use(express.json());
 
-app.get('/v1/inventory', controller.getFunction);
-app.get('/v1/inventory/:id', controller.getOneFunction);
-app.post('/v1/inventory', middleWare.middleWarecheck, controller.postFunction);
-app.put(
+app_router.get('/v1/inventory', controller.getFunction);
+app_router.get('/v1/inventory/:id', controller.getOneFunction);
+app_router.post(
+	'/v1/inventory',
+	middleWare.middleWarecheck,
+	controller.postFunction
+);
+app_router.put(
 	'/v1/inventory/:id',
 	middleWare.middleWarecheck,
 	controller.putFunction
 );
-app.delete(
+app_router.delete(
 	'/v1/inventory',
 	middleWare.middleWarecheck,
 	controller.deleteFunction

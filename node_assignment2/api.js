@@ -109,6 +109,11 @@ function putFunction(req, res) {
 			const singleInventory = inventoryReturned.findIndex((oneInventory) => {
 				return oneInventory.id === inventoryToJson.id;
 			});
+			if (singleInventory === -1) {
+				res.writeHead(404);
+				res.write('Value not found');
+				res.end();
+			}
 			const updatedInventory = {
 				...inventoryReturned[singleInventory],
 				...inventoryToJson,
@@ -140,7 +145,6 @@ function deleteFunction(req, res) {
 	req.on('end', () => {
 		const inventoryToString = Buffer.concat(inventoryBody).toString();
 		const inventoryToJson = JSON.parse(inventoryToString);
-		// console.log(inventoryToJson);
 		fs.readFile(inventoryDb, 'utf-8', (err, data) => {
 			if (err) {
 				res.writeHead(404);
@@ -167,8 +171,6 @@ function deleteFunction(req, res) {
 				res.write();
 				res.end();
 			});
-
-			// console.log(inventoryReturned);
 		});
 	});
 }

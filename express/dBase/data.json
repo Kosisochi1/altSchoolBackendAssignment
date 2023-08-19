@@ -6,12 +6,6 @@
         "id": "183"
     },
     {
-        "name": "go",
-        "price": 600,
-        "size": "large",
-        "id": "160"
-    },
-    {
         "name": "went",
         "price": 600,
         "size": "large",
@@ -22,5 +16,29 @@
         "price": 350,
         "size": "large",
         "id": "28"
+    },
+    {
+        "name": "Papa",
+        "price": 200,
+        "size": "meduim",
+        "id": "299"
+    },
+    {
+        "name": "Mama",
+        "price": 200,
+        "size": "meduim",
+        "id": "293"
+    },
+    {
+        "name": "Mama-Iyabu",
+        "price": 200,
+        "size": "meduim",
+        "id": "200"
+    },
+    {
+        "name": "Dogo",
+        "price": 200,
+        "size": "meduim",
+        "id": "282"
     }
 ]

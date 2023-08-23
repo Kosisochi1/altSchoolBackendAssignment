@@ -1,5 +1,5 @@
 const express = require('express');
-const controller = require('./controllerFunction');
+const controller = require('./control_function');
 const middleWare = require('./middleWare');
 const bodyParser = require('body-parser');
 

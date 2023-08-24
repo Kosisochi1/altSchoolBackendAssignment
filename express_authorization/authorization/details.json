@@ -1,0 +1,20 @@
+[
+    {
+        "Name": "Emmanuel",
+        "password": "emmanuel",
+        "level": 2,
+        "level_type": "admin"
+    },
+    {
+        "Name": "Emman",
+        "password": "emmanuel",
+        "level": 2,
+        "level_type": "admin"
+    },
+    {
+        "Name": "Adams",
+        "password": "emmanuel",
+        "level": 1,
+        "level_type": "user"
+    }
+]

@@ -1,20 +1,16 @@
 [
     {
-        "Name": "Emmanuel",
-        "password": "emmanuel",
-        "level": 2,
-        "level_type": "admin"
-    },
-    {
-        "Name": "Emman",
-        "password": "emmanuel",
-        "level": 2,
-        "level_type": "admin"
-    },
-    {
         "Name": "Adams",
-        "password": "emmanuel",
-        "level": 1,
-        "level_type": "user"
+        "password": "adams",
+        "level": 2,
+        "level_type": "admin",
+        "api_key": "Adams_adams"
+    },
+    {
+        "Name": "Adamssss",
+        "password": "adams",
+        "level": 2,
+        "level_type": "admin",
+        "api_key": "Adamssss_adams"
     }
 ]

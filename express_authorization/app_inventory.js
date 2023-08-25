@@ -7,17 +7,36 @@ const authenticate = require('./authorization_middleWare');
 // const PORT = 5000;
 // const app = express();
 const app_router = express.Router();
+app_router.use(authenticate.authenticationMiddleWare);
 
-app_router.get('/', controller.getFunction);
-app_router.get('/:id', controller.getOneFunction);
+app_router.get(
+	'/',
+	authenticate.authenticationMiddleWare,
+	controller.getFunction
+);
+app_router.get(
+	'/:id',
+	authenticate.authenticationMiddleWare,
+	controller.getOneFunction
+);
 app_router.post(
 	'/',
-	authenticate.athorizationMiddleWare,
+	authenticate.authorizationMiddleWare,
 	middleWare.middleWarecheck,
 	controller.postFunction
 );
-app_router.put('/:id', middleWare.middleWarecheck, controller.putFunction);
-app_router.delete('/', middleWare.middleWarecheck, controller.deleteFunction);
+app_router.put(
+	'/:id',
+	authenticate.authorizationMiddleWare,
+	middleWare.middleWarecheck,
+	controller.putFunction
+);
+app_router.delete(
+	'/',
+	authenticate.authorizationMiddleWare,
+	middleWare.middleWarecheck,
+	controller.deleteFunction
+);
 // app.listen(PORT, () => {
 // 	console.log(`Server started at localhost:${PORT}`);
 // });
